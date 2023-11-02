@@ -1,3 +1,9 @@
+<script setup lang="ts">
+const { data } = await useMicroCMSGetList({
+  endpoint: "works",
+  queries: { limit: 2 },
+});
+</script>
 <template>
   <div>
     <div class="mainVisual">
@@ -47,28 +53,19 @@
       <div class="container">
         <h2 class="headingPrimary">works</h2>
         <ol class="row works">
-          <li class="works__item">
-            <NuxtLink to="#!" class="works__inner">
-              <figure class="works__image">
-                <img src="https://placehold.jp/370x229.png" alt="">
+          <li v-for="work in data?.contents" :key="work.id" class="works__item">
+            <NuxtLink :to="`/works/${work.id}`" class="works__inner">
+              <figure class="works_image">
+                <img
+                :width="work.thumbnail.width"
+                :height="work.thumbnail.height"
+                :src="work.thumbnail.url" 
+                :alt="work.title">
               </figure>
-              <div class="works-text">
-                <p class="work__name">作品名</p>
+              <div class="works__text">
+                <p class="works__name">{{ work.title }}</p>
                 <p class="works__date">
-                  <time datetime="2023-11-02">2023.11.2</time>
-                </p>
-              </div>
-            </NuxtLink>
-          </li>
-          <li class="works__item">
-            <NuxtLink to="#!" class="works__inner">
-              <figure class="works__image">
-                <img src="https://placehold.jp/370x229.png" alt="">
-              </figure>
-              <div class="works-text">
-                <p class="work__name">作品名</p>
-                <p class="works__date">
-                  <time datetime="2023-11-02">2023.11.2</time>
+                  <time :datetime="work.release">{{ work.release }}</time>
                 </p>
               </div>
             </NuxtLink>
