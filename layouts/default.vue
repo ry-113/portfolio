@@ -2,7 +2,7 @@
   <div class="wrapper">
     <TheHeader class="header"/>
     <main class="main">
-      <Nuxt/>
+      <slot/>
     </main>
     <TheFooter/>
   </div>
