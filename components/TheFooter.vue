@@ -1,7 +1,7 @@
 <template>
   <footer class="footer bg-zinc-800 text-white pt-8">
     <div class="footerContainer mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 flex items-center justify-between">
-      <ul class="contact-address-list">
+      <ul class="contact-address-list text-sm">
         <li>国立職業リハビリテーションセンター</li>
         <li>DTP・Web技術科</li>
         <li>TEL:042-995-1711</li>

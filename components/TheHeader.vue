@@ -4,8 +4,8 @@
       <component :is="isTopPage ? 'h1' : 'p' " class="logo text-4xl">
         <NuxtLink to="/">My Portfolio</NuxtLink>
       </component>
-
-      <nav>
+      <HamburgerMenu></HamburgerMenu>
+      <nav class="hidden md:inline-block">
         <ul class="menu flex gap-x-4">
           <li>
             <NuxtLink to="/#about" class="menu__link">About</NuxtLink>
@@ -23,6 +23,8 @@
 </template>
 
 <script setup lang="ts">
+import HamburgerMenu from './HamburgerMenu.vue';
+
 const route = useRoute();
 
 const isTopPage = computed(():boolean => {
