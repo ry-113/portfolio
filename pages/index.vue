@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { data } = await useMicroCMSGetList({
+import type { Works } from "~/types/works";
+const { data } = await useMicroCMSGetList<Works>({
   endpoint: "works",
   queries: { limit: 2 },
 });
@@ -64,9 +65,6 @@ const { data } = await useMicroCMSGetList({
               </figure>
               <div class="works__text">
                 <p class="works__name">{{ work.title }}</p>
-                <p class="works__date">
-                  <time :datetime="work.release">{{ work.release }}</time>
-                </p>
               </div>
             </NuxtLink>
           </li>

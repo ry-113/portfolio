@@ -1,5 +1,6 @@
 <script setup lang="ts">
-const { data: works } = await useMicroCMSGetList({
+import type { Works } from "~/types/works";
+const { data: works } = await useMicroCMSGetList<Works>({
   endpoint: "works",
 });
 </script>
@@ -14,7 +15,7 @@ const { data: works } = await useMicroCMSGetList({
 
     <div class="container">
       <ol class="row works">
-        <li v-for="work in works.contents" :key="work.id" class="works__item">
+        <li v-for="work in works?.contents" :key="work.id" class="works__item">
           <NuxtLink :to="`/works/${work.id}`" class="works__inner">
             <figure class="works_image">
               <img
@@ -25,9 +26,6 @@ const { data: works } = await useMicroCMSGetList({
             </figure>
             <div class="works__text">
               <p class="works__name">{{ work.title }}</p>
-              <p class="works__date">
-                <time :datetime="work.release">{{ work.release }}</time>
-              </p>
             </div>
           </NuxtLink>
         </li>

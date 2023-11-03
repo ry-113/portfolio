@@ -13,6 +13,9 @@
           <li>
             <NuxtLink to="/works" class="menu__link">works</NuxtLink>
           </li>
+          <li>
+            <NuxtLink to="/skills" class="menu__link">skills</NuxtLink>
+          </li>
         </ul>
       </nav>
     </div>

@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import type { Works } from "~/types/works";
+const { data } = await useMicroCMSGetList<Works>({
+  endpoint: "works",
+  queries: { limit: 2 },
+});
 const { params } = useRoute(); 
-const { data: work } = await useMicroCMSGetListDetail({
+const { data: work } = await useMicroCMSGetListDetail<Works>({
   endpoint: "works",
   contentId: params.id,
 })
