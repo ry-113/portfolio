@@ -7,7 +7,7 @@
       <button class="absolute z-30 top-11 right-5.5 text-4xl text-white" @click="toggleMenu">
         <font-awesome-icon :icon="['fas', 'xmark']" />
       </button>
-      <ul class="bg-gray-500 absolute inset-0 h-screen text-white">
+      <ul class="bg-black absolute inset-0 h-screen text-white">
         <li class="pl-5 text-xl my-3" @click="toggleMenu">
           <NuxtLink to="/#about" class="menu__link inline-block py-2 px-4">About</NuxtLink>
         </li>

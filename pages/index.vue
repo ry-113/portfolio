@@ -10,11 +10,11 @@ const { data } = await useMicroCMSGetList<Works>({
     <div class="mainVisual mt-32 absolute inset-0 w-full h-[calc(100vh - 8rem)]">
       <picture>
         <source
-        srcset="https://placehold.jp/375x530.png"
+        srcset="~/assets/mainvisual.jpg"
         media="(max-width: 767px)"
-        class="w-full h-full inset-0"
+        class="w-full h-full inset-0 object-cover"
         />
-        <img src="https://placehold.jp/1440x436.png" alt="" class="w-full h-full">
+        <img src="~/assets/mainvisual.jpg" alt="" class="w-full h-full object-cover">
       </picture>
     </div>
     <section id="about" class="sectionPrimary pt-[100vh]">
