@@ -6,14 +6,14 @@ const { data: skills } = await useMicroCMSGetList<Skills>({
 </script>
 
 <template>
-  <ul class="card-group">
+  <ul class="card-group pt-32">
     <li
     v-for="skill in skills?.contents"
     :key="skill.title" 
     class="card">
       <figure class="card__imgframe">
         <img 
-        :src="`${skill.logo.url}?fit=fill&fill-color=3331cbf&w=50&h=50`"
+        :src="`${skill.logo.url}?fit=fill&fill-color=3331cbf&w=100&h=100`"
         :alt="skill.title" />
       </figure>
       <div class="card__textbox">

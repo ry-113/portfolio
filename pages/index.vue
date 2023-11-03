@@ -7,17 +7,17 @@ const { data } = await useMicroCMSGetList<Works>({
 </script>
 <template>
   <div>
-    <div class="mainVisual">
+    <div class="mainVisual mt-32 absolute inset-0 w-full h-[calc(100vh - 8rem)]">
       <picture>
         <source
         srcset="https://placehold.jp/375x530.png"
         media="(max-width: 767px)"
+        class="w-full h-full inset-0"
         />
-        <img src="https://placehold.jp/1440x436.png" alt="">
+        <img src="https://placehold.jp/1440x436.png" alt="" class="w-full h-full">
       </picture>
     </div>
-
-    <section id="about" class="sectionPrimary">
+    <section id="about" class="sectionPrimary pt-[100vh]">
       <div class="container">
         <h2 class="headingPrimary">about</h2>
         <div class="profile">

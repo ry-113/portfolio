@@ -5,7 +5,7 @@ const { data: works } = await useMicroCMSGetList<Works>({
 });
 </script>
 <template>
-  <div class="child">
+  <div class="child pt-32">
     <div class="childMainVisual">
       <div class="container container--lg">
         <h1 class="childMainVisual__title">Works</h1>
