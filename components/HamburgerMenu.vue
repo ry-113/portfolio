@@ -23,8 +23,5 @@
 </template>
 
 <script setup lang="ts">
-const isMenuOpen = ref(false);
-const toggleMenu = (): void => {
-  isMenuOpen.value = !isMenuOpen.value;
-}
+const { isMenuOpen, toggleMenu } = useHamburger();
 </script>
