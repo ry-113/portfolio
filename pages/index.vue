@@ -18,8 +18,8 @@ const { data } = await useMicroCMSGetList<Works>({
       </picture>
     </div>
     <section id="about" class="sectionPrimary pt-[100vh]">
-      <div class="container">
-        <h2 class="headingPrimary">about</h2>
+      <div class="container mt-20">
+        <h2 class="headingPrimary" id="about-title">about</h2>
         <div class="profile">
           <div class="profile__upper">
             <div class="profile__text">
