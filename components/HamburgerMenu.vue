@@ -11,7 +11,7 @@
 
       <ul class="bg-black absolute inset-0 h-screen text-white">
         <li class="pl-5 text-xl my-3">
-          <NuxtLink to="/#about-title" class="menu__link inline-block py-2 px-4">About</NuxtLink>
+          <NuxtLink to="/#about" class="menu__link inline-block py-2 px-4">About</NuxtLink>
         </li>
         <li class="pl-5 text-xl my-3">
           <NuxtLink to="/skills" class="menu__link inline-block py-2 px-4">Skills</NuxtLink>

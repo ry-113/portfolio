@@ -8,7 +8,7 @@
       <nav class="hidden md:inline-block">
         <ul class="menu flex gap-x-4">
           <li>
-            <NuxtLink to="/#about-title" class="menu__link">About</NuxtLink>
+            <NuxtLink to="/#about" class="menu__link">About</NuxtLink>
           </li>
           <li>
             <NuxtLink to="/skills" class="menu__link">Skills</NuxtLink>
