@@ -1,9 +1,9 @@
 <template>
   <div class="hamburger inline-block md:hidden">
-    <button class="z-10 text-3xl" @click="toggleMenu">
+    <button class="z-10 text-3xl text-white" @click="toggleMenu">
       <font-awesome-icon :icon="['fas', 'bars']" />
     </button>
-    <nav class="flex justify-center items-center z-20 transition ease-out duration-1000 delay-75" :class="isMenuOpen ? 'visible opacity-90' : 'invisible opacity-0'" @click="toggleMenu">
+    <nav class="z-20 transition ease-out duration-1000 delay-75" :class="isMenuOpen ? 'visible opacity-90' : 'invisible opacity-0'" @click="toggleMenu">
 
       <button class="absolute z-30 top-11 right-5.5 text-4xl text-white">
         <font-awesome-icon :icon="['fas', 'xmark']" />
