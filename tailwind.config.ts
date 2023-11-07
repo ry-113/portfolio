@@ -4,7 +4,8 @@ export default {
   theme: {
     extend: {
       animation: {
-          "text-flicker-in-glow": "text-flicker-in-glow 4s linear   both"
+          "text-flicker-in-glow": "text-flicker-in-glow 2s linear   both",
+          "scale-up-center": "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)  both"
       },
       keyframes: {
           "text-flicker-in-glow": {
@@ -43,10 +44,16 @@ export default {
                   opacity: "1",
                   "text-shadow": "0 0 30px rgba(255, 255, 255, .6), 0 0 60px rgba(255, 255, 255, .45), 0 0 110px rgba(255, 255, 255, .25), 0 0 100px rgba(255, 255, 255, .1)"
               }
-          }
-      }
-  }
-}
+          },
+          "scale-up-center": {
+            "0%": {
+                transform: "scale(.5)"
+            },
+            to: {
+                transform: "scale(1)"
+            },
+        },
+      },
     },
   },
   plugins: [

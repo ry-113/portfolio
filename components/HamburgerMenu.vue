@@ -13,13 +13,13 @@
         </button>
       </ClientOnly>
       <ul class="bg-black absolute inset-0 h-screen text-white">
-        <li class="pl-5 text-xl my-3">
+        <li class="pl-5 text-2xl my-3">
           <NuxtLink to="/#about" class="menu__link inline-block py-2 px-4">About</NuxtLink>
         </li>
-        <li class="pl-5 text-xl my-3">
+        <li class="pl-5 text-2xl my-3">
           <NuxtLink to="/skills" class="menu__link inline-block py-2 px-4">Skills</NuxtLink>
         </li>
-        <li class="pl-5 text-xl my-3">
+        <li class="pl-5 text-2xl my-3">
           <NuxtLink to="/works" class="menu__link inline-block py-2 px-4">Works</NuxtLink>
         </li>
       </ul>

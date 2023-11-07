@@ -11,9 +11,9 @@ const { data: works } = await useMicroCMSGetList<Works>({
 
     <div class="container mb-10">
       <ol class="works-list flex flex-wrap justify-center gap-5">
-        <li v-for="work in works?.contents" :key="work.id" class="works__item">
+        <li v-for="work in works?.contents" :key="work.id" class="works__item animate-scale-up-center">
           <NuxtLink :to="`/works/${work.id}`" class="works__inner">
-            <figure class="works_image  drop-shadow-[0_0_8px_skyblue]">
+            <figure class="works_image  hover:drop-shadow-[0_0_8px_skyblue] duration-300">
               <img
               :width="work.thumbnail.width"
               :height="work.thumbnail.height"

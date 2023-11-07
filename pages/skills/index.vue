@@ -10,7 +10,7 @@ const { data: skills } = await useMicroCMSGetList<Skills>({
   <section id="skills" class="mb-32">
     <h2 class="headingPrimary mb-4 text-2xl font-extrabold text-gray-900 md:text-3xl lg:text-4xl text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Skills</span></h2>
     <div class="flex justify-center flex-wrap gap-5 mt-10">
-      <div class="card md:w-[240px] w-[300px] glass" v-for="skill in skills?.contents" :key="skill.title">
+      <div class="card md:w-[240px] w-[300px] glass animate-scale-up-center" v-for="skill in skills?.contents" :key="skill.title">
         <figure class="h-44 drop-shadow-[0_0_8px_skyblue]">
           <img 
             :src="`${skill.logo.url}?fit=fillmax&fill-color=ffffff&w=600&h=600`"
