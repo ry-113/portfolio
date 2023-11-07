@@ -16,7 +16,7 @@ import 'vue3-carousel/dist/carousel.css';
     <div class="pt-[100vh]"></div>
     <section id="about" class="sectionPrimary py-12">
       <div class="container">
-        <h2 class="headingPrimary mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-4xl text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">About</span></h2>
+        <h2 class="headingPrimary mb-4 text-2xl font-extrabold text-gray-900 md:text-3xl lg:text-4xl text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">About</span></h2>
         <div class="profile pt-12">
           <div class="profile__upper flex justify-between">
             <div class="profile__text">
@@ -60,27 +60,28 @@ import 'vue3-carousel/dist/carousel.css';
       <div class="container">
         <h2 class="headingPrimary mb-4 text-2xl font-extrabold text-gray-900 dark:text-white md:text-3xl lg:text-4xl text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Works</span></h2>
 
-        <Carousel :autoplay="3000" :wrap-around="true" :transition="1000" class="py-5">
-          <Slide v-for="work in data?.contents" :key="work.id">
-            <NuxtLink :to="`/works/${work.id}`" class="works__inner">
-              <figure class="works_image">
-                <img
-                :width="work.thumbnail.width"
-                :height="work.thumbnail.height"
-                :src="work.thumbnail.url" 
-                :alt="work.title">
-              </figure>
-              <div class="works__text">
-                <p class="works__name">{{ work.title }}</p>
-              </div>
-            </NuxtLink>
-          </Slide>
-      
-          <template #addons>
-            <Pagination />
-          </template>
-        </Carousel>
+        <ClientOnly>
+          <Carousel :autoplay="3000" :wrap-around="true" :transition="1000" class="py-5">
+            <Slide v-for="work in data?.contents" :key="work.id">
+              <NuxtLink :to="`/works/${work.id}`" class="works__inner">
+                <figure class="works_image">
+                  <img
+                  :width="work.thumbnail.width"
+                  :height="work.thumbnail.height"
+                  :src="work.thumbnail.url" 
+                  :alt="work.title">
+                </figure>
+                <div class="works__text">
+                  <p class="works__name">{{ work.title }}</p>
+                </div>
+              </NuxtLink>
+            </Slide>
         
+            <template #addons>
+              <Pagination />
+            </template>
+          </Carousel>
+        </ClientOnly>
         <div class="btn-area text-center">
           <button class="relative inline-flex items-center justify-center p-0.5 mb-2 mr-2 overflow-hidden text-sm font-medium text-white rounded-lg group bg-gradient-to-br from-green-400 to-blue-600 group-hover:from-green-400 group-hover:to-blue-600 hover:text-white focus:ring-4 focus:outline-none focus:ring-green-200 dark:focus:ring-green-800">
             <span class="relative px-5 py-2.5 transition-all ease-in duration-75 bg-zinc-800 rounded-md group-hover:bg-opacity-0">

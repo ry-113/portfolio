@@ -10,7 +10,9 @@
       <ul class="sns-link-list">
         <li>
           <NuxtLink to="https://github.com/ry-113">
-            <font-awesome-icon :icon="['fab', 'github']" size="2x"/>
+            <ClientOnly>
+              <font-awesome-icon :icon="['fab', 'github']" size="2x"/>
+            </ClientOnly>
           </NuxtLink>
         </li>
       </ul>
