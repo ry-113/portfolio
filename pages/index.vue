@@ -24,12 +24,12 @@ import 'vue3-carousel/dist/carousel.css';
                 山元 稜<span lang="en" class="pl-7">Ryo Yamamoto</span>
               </p>
               <dl class="profile__item">
-                <dt class="profile__title pt-5 pb-1">技術スタック</dt>
+                <dt class="profile__title pt-5 pb-1 font-bold">技術スタック</dt>
                 <dd>HTML / CSS / JavaScript / TypeScript / Vue3 / Nuxt3 </dd>
               </dl>
 
               <dl class="profile__item">
-                <dt class="profile__title pt-5 pb-1">趣味</dt>
+                <dt class="profile__title pt-5 pb-1 font-bold">趣味</dt>
                 <dd>ゲーム、温泉・サウナ、筋トレ、建築、コーヒー、自然</dd>
               </dl>
             </div>
