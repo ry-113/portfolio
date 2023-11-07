@@ -1,12 +1,12 @@
 <template>
-  <header class="header w-full fixed z-10 bg-zinc-800">
+  <header class="glass w-full fixed z-10">
     <div class="headerContainer flex justify-between items-center  h-32 max-w-7xl  inset-0 mx-auto px-5 sm:px-8 lg:px-10">
       <component :is="isTopPage ? 'h1' : 'p' " class="logo text-4xl text-white">
         <NuxtLink to="/">My Portfolio</NuxtLink>
       </component>
       <HamburgerMenu></HamburgerMenu>
       <nav class="hidden md:inline-block">
-        <ul class="menu flex gap-x-4 text-white">
+        <ul class="flex gap-x-4 text-white">
           <li>
             <NuxtLink to="/#about" class="menu__link">About</NuxtLink>
           </li>

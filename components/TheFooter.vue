@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer  text-white bg-zinc-700 pt-8">
+  <footer class="glass text-white bg-zinc-700 pt-8">
     <div class="footerContainer mx-auto max-w-7xl px-5 sm:px-8 lg:px-10 flex items-center justify-between mb-6">
       <ul class="contact-address-list text-sm">
         <li class="py-1">国立職業リハビリテーションセンター</li>
