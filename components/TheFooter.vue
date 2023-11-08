@@ -4,7 +4,7 @@
       <ul class="contact-address-list text-sm">
         <li class="py-1">連絡先</li>
         <li class="py-1">DTP・Web技術科 山元 稜</li>
-        <li class="py-1">E-Mail:nvdw23029@nvrcd.ac.jp</li>
+        <li class="py-1">nvdw23029@nvrcd.ac.jp</li>
       </ul>
       <ul class="sns-link-list">
         <li>
