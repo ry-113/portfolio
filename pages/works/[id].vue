@@ -31,20 +31,18 @@ const { data: work } = await useMicroCMSGetListDetail<Works>({
       <div class="worksMainVisual__inner">
         <figure class="worksMainVisual__thumbnail relative">
           <img 
-          :src="work?.thumbnail.url"
+          :src="`${work?.thumbnail.url}?fit=crop&w=800&h=440`"
           :alt="work?.title"
           class="w-full h-full drop-shadow-[0_0_8px_skyblue]" />
-          <div class="worksMainVisual__contents absolute top-0 -r-0 w-full h-full bg-gradient-to-b from-black to-transparent pl-5 pt-5">
-            <h1 class="worksMainVisual__title text-xl md:text-2xl lg:text-2xl mb-1 font-bold">{{ work?.title }}</h1>
-            <dl class="worksMainVisual__item flex gap-5">
-              <dt class="worksMainVisual__itemName">作業時間</dt>
-              <dd>{{ work?.term }}</dd>
-            </dl>
-        </div>
         </figure>
       </div>
     </div>
     <div class="description mb-10">
+      <h1 class="worksMainVisual__title text-xl md:text-2xl lg:text-2xl mb-1 font-bold">{{ work?.title }}</h1>
+      <dl class="worksMainVisual__item flex gap-5">
+        <dt class="worksMainVisual__itemName font-bold">作業時間</dt>
+        <dd>{{ work?.term }}</dd>
+      </dl>
       <dl class="worksItem flex gap-5">
         <dt class="worksItem__title font-bold shrink-0">URL</dt>
         <dd class="worksItem__contents">

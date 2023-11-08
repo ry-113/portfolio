@@ -35,7 +35,7 @@ import 'vue3-carousel/dist/carousel.css';
             </div>
 
             <figure class="profile__image">
-              <img class="rounded-full" src="https://placehold.jp/260x260.png" alt="">
+              <img class="rounded-full" src="~/assets/profile.jpg" alt="">
             </figure>
           </div><!-- profile__upperここまで -->
 
@@ -66,9 +66,7 @@ import 'vue3-carousel/dist/carousel.css';
               <NuxtLink :to="`/works/${work.id}`" class="works__inner">
                 <figure class="works_image">
                   <img
-                  :width="work.thumbnail.width"
-                  :height="work.thumbnail.height"
-                  :src="work.thumbnail.url" 
+                  :src="`${work.thumbnail.url}?fit=crop&w=800&h=460`" 
                   :alt="work.title">
                 </figure>
                 <div class="works__text">
@@ -93,7 +91,3 @@ import 'vue3-carousel/dist/carousel.css';
     </section>
   </div>
 </template>
-
-<style scoped>
-
-</style>
