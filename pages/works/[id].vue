@@ -12,9 +12,22 @@ const { data: work } = await useMicroCMSGetListDetail<Works>({
 </script>
 
 <template>
-  <div class="h-44"></div>
+  <div class="h-24 md:h-40"></div>
+  <div class="text-sm md:text-lg breadcrumbs">
+      <ul>
+        <li>
+          <NuxtLink to="/">Home</NuxtLink>
+        </li> 
+        <li>
+          <NuxtLink to="/works">Works</NuxtLink>
+        </li>
+        <li>
+          {{ work?.title }}
+        </li>
+      </ul>
+    </div>
   <div class="child">
-    <div class="worksMainVisual">
+    <div class="worksMainVisual my-10">
       <div class="worksMainVisual__inner">
         <figure class="worksMainVisual__thumbnail relative">
           <img 
@@ -31,12 +44,11 @@ const { data: work } = await useMicroCMSGetListDetail<Works>({
         </figure>
       </div>
     </div>
-
     <div class="description mb-10">
       <dl class="worksItem flex gap-5">
         <dt class="worksItem__title font-bold shrink-0">URL</dt>
         <dd class="worksItem__contents">
-          <a :href="work?.url" target="_blank">{{ work?.url }}</a>
+          <NuxtLink :href="work?.url" target="_blank">{{ work?.url }}</NuxtLink>
         </dd>
       </dl>
       <dl class="worksItem flex gap-5">

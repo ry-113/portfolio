@@ -5,7 +5,8 @@ export default {
     extend: {
       animation: {
           "text-flicker-in-glow": "text-flicker-in-glow 2s linear   both",
-          "scale-up-center": "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)  both"
+          "scale-up-center": "scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000)  both",
+          "arrow-move": "arrow-move 1s ease-in-out infinite",
       },
       keyframes: {
           "text-flicker-in-glow": {
@@ -52,12 +53,40 @@ export default {
             to: {
                 transform: "scale(1)"
             },
-        },
+         },
+         "arrow-move": {
+            "0%": {
+                opacity: "1",
+                bottom: "1%",
+            },
+            "50%": {
+                bottom: "3%",
+                opacity: "0.7",
+            },
+            "100%": {
+                opacity: "1",
+                bottom: "1%",
+            },
+         },
       },
     },
   },
   plugins: [
     require("daisyui"),
+    function ({ addUtilities }) {
+        const newUtilities = {
+          ".horizontal-tb": {
+            writingMode: "horizontal-tb",
+          },
+          ".vertical-rl": {
+            writingMode: "vertical-rl",
+          },
+          ".vertical-lr": {
+            writingMode: "vertical-lr",
+          },
+        };
+        addUtilities(newUtilities);
+      },
   ],
 };
 

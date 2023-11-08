@@ -6,7 +6,17 @@ const { data: works } = await useMicroCMSGetList<Works>({
 </script>
 <template>
   <div class="child">
-    <div class="h-44"></div>
+    <div class="h-24 md:h-40"></div>
+    <div class="text-sm md:text-lg breadcrumbs">
+      <ul>
+        <li>
+          <NuxtLink to="/">Home</NuxtLink>
+        </li> 
+        <li>
+          Works
+        </li> 
+      </ul>
+    </div>
     <h2 class="headingPrimary mb-4 text-2xl font-extrabold text-gray-900 md:text-3xl lg:text-4xl text-center"><span class="text-transparent bg-clip-text bg-gradient-to-r to-emerald-600 from-sky-400">Works</span></h2>
 
     <div class="container mb-10">
