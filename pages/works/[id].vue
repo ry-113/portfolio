@@ -8,7 +8,7 @@ const { params } = useRoute();
 const { data: work } = await useMicroCMSGetListDetail<Works>({
   endpoint: "works",
   contentId: params.id,
-})
+});
 </script>
 
 <template>
