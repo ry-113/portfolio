@@ -1,7 +1,16 @@
 <script setup lang="ts">
 import type { Skills } from "~/types/skills";
-const { data: skills } = await useMicroCMSGetList<Skills>({
-  endpoint: "skills",
+const config = useRuntimeConfig();
+const client = {
+  serviceDomain: config.public.serviceDomain,
+  apiKey: config.public.apiKey
+};
+
+const { data: skills } = await useFetch("/skills",{
+  baseURL: `https://${client.serviceDomain}.microcms.io/api/v1`,
+  headers: {
+    "X-MICROCMS-API-KEY": client.apiKey,
+  },
 });
 </script>
 

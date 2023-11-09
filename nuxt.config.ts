@@ -16,4 +16,10 @@ export default defineNuxtConfig({
     },
   },
   css: ["@fortawesome/fontawesome-svg-core/styles.css"],
+  runtimeConfig: {
+    public: {
+      serviceDomain: process.env.MICROCMS_SERVICE_DOMAIN,
+      apiKey: process.env.MICROCMS_API_KEY,
+    },
+  },
 });

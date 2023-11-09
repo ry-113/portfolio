@@ -1,13 +1,17 @@
 <script setup lang="ts">
 import type { Works } from "~/types/works";
-const { data } = await useMicroCMSGetList<Works>({
-  endpoint: "works",
-  queries: { limit: 2 },
-});
 const { params } = useRoute(); 
-const { data: work } = await useMicroCMSGetListDetail<Works>({
-  endpoint: "works",
-  contentId: params.id,
+const slug = params.slug;
+const config = useRuntimeConfig();
+const client = {
+  serviceDomain: config.public.serviceDomain,
+  apiKey: config.public.apiKey
+};
+const { data: work } = await useFetch(`/works/${slug}`, {
+  baseURL: `https://${client.serviceDomain}.microcms.io/api/v1`,
+  headers: {
+    "X-MICROCMS-API-KEY": client.apiKey,
+  },
 });
 </script>
 

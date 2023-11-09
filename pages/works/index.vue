@@ -1,7 +1,15 @@
 <script setup lang="ts">
+const config = useRuntimeConfig();
+const client = {
+  serviceDomain: config.public.serviceDomain,
+  apiKey: config.public.apiKey
+};
 import type { Works } from "~/types/works";
-const { data: works } = await useMicroCMSGetList<Works>({
-  endpoint: "works",
+const { data: works } = await useFetch<Works>("/works",{
+  baseURL: `https://${client.serviceDomain}.microcms.io/api/v1`,
+  headers: {
+    "X-MICROCMS-API-KEY": client.apiKey,
+  },
 });
 </script>
 <template>
