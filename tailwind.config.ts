@@ -84,6 +84,9 @@ export default {
           ".vertical-lr": {
             writingMode: "vertical-lr",
           },
+          ".smooth-scroll": {
+            scrollBehavior: "smooth",
+          },
         };
         addUtilities(newUtilities);
       },

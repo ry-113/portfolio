@@ -12,6 +12,7 @@ useHead({
   },
   htmlAttrs: {
     lang: "ja",
+    class: "smooth-scroll"
   }
 });
 </script>
