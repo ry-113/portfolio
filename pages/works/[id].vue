@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import type { Works } from "~/types/works";
 const { params } = useRoute(); 
-const slug = params.slug;
+const id = params.id;
 const config = useRuntimeConfig();
 const client = {
   serviceDomain: config.public.serviceDomain,
   apiKey: config.public.apiKey
 };
-const { data: work } = await useFetch(`/works/${slug}`, {
+const { data: work } = await useFetch(`/works/${id}`, {
   baseURL: `https://${client.serviceDomain}.microcms.io/api/v1`,
   headers: {
     "X-MICROCMS-API-KEY": client.apiKey,
